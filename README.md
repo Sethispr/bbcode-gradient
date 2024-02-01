@@ -18,7 +18,8 @@ Feel free to experiment with different colors to achieve the desired look for yo
 
 ## Examples
 Here's an example of generated BBCode:
-```bbcode[b][size=300][color=#00fffb]h[/color][color=#30fbe8]e[/color][color=#61f8d4]l[/color][color=#91f4c1]l[/color][color=#c1f0ad]o[/color][/size][/b]
+```bbcode
+[b][size=300][color=#00fffb]h[/color][color=#30fbe8]e[/color][color=#61f8d4]l[/color][color=#91f4c1]l[/color][color=#c1f0ad]o[/color][/size][/b]
 ```
 
 This BBCode will produce a gradient-colored text in forums that support the specified BBCode.
