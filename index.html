@@ -1,0 +1,107 @@
+<!-- Gradient Text Colorizer by sethispr -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    	<div class="header">
+		<span>
+			<a style="margin-left: 40px;" class="header-text">Gradient Generator</a>
+			<a style="margin-left: 20px; transition: 0.3s;" class="header-text">By: Seth</a>
+		</span>
+    <div id="container">
+      <textarea
+        id="gradient-text"
+        rows="4"
+        placeholder="Start typing.."
+      ></textarea>
+
+      <div id="color-picker-container">
+        <input
+          type="color"
+          class="color-picker"
+          id="start-color"
+          value="#00FFFB"
+        />
+        <input
+          type="color"
+          class="color-picker"
+          id="end-color"
+          value="#C1F0AD"
+        />
+      </div>
+
+      <div id="palette"></div>
+
+      <div id="settings-container">
+        <label for="font-select">Font</label>
+        <select id="font-select">
+          <option value="Default">Default</option>
+          <option value="Arial">Arial</option>
+          <option value="Arial Black">Arial Black</option>
+          <option value="Arial Narrow">Arial Narrow</option>
+          <option value="Book Antiqua">Book Antiqua</option>
+          <option value="Calibri">Calibri</option>
+          <option value="Cambria">Cambria</option>
+          <option value="Candara">Candara</option>
+          <option value="Century">Century</option>
+          <option value="Century Gothic">Century Gothic</option>
+          <option value="Consolas">Consolas</option>
+          <option value="Constantia">Constantia</option>
+          <option value="Copperplate">Copperplate</option>
+          <option value="Corbel">Corbel</option>
+          <option value="Curlz MT">Curlz MT</option>
+          <option value="cursive">Cursive</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="Fixedsys">Fixedsys</option>
+          <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+          <option value="Gabriola">Gabriola</option>
+          <option value="Garamond">Garamond</option>
+          <option value="Garton">Garton</option>
+          <option value="Lucida Console">Lucida Console</option>
+          <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+          <option value="Microsoft Sans Serif">Microsoft Sans Serif</option>
+          <option value="Mistral">Mistral</option>
+          <option value="monospace">Monospace</option>
+          <option value="Monotype Corsiva">Monotype Corsiva</option>
+          <option value="Nyala">Nyala</option>
+          <option value="Optima">Optima</option>
+          <option value="Palatino Linotype">Palatino Linotype</option>
+          <option value="Papyrus">Papyrus</option>
+          <option value="System">System</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Webdings">Webdings</option>
+        </select>
+
+        <label for="font-size">Size</label>
+        <select id="font-size">
+          <option value="Default">Default</option>
+          <option value="1">Small</option>
+          <option value="2">Medium</option>
+          <option value="3">Large</option>
+        </select>
+
+        <div id="bold-italic-checkbox">
+          <input type="checkbox" id="bold-checkbox" />
+          <label for="bold-checkbox">Bold</label>
+
+          <input type="checkbox" id="italic-checkbox" />
+          <label for="italic-checkbox">Italic</label>
+        </div>
+      </div>
+
+      <div id="output-container">
+        <div id="output-text"></div>
+        <textarea id="bbcode-output" readonly></textarea>
+      </div>
+    </div>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
