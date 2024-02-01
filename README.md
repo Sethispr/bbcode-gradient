@@ -22,5 +22,5 @@ Here's an example of generated BBCode:
 [b][size=300][color=#00fffb]h[/color][color=#30fbe8]e[/color][color=#61f8d4]l[/color][color=#91f4c1]l[/color][color=#c1f0ad]o[/color][/size][/b]
 ```
 
-This BBCode will produce a gradient-colored text in forums that support the specified BBCode.
-Enjoy enhancing your forum posts with vibrant and stylish gradient text!
+This BBCode will produce a gradient-colored text in forums or about mes that support the specified BBCode.
+Enjoy enhancing your forum posts and profiles with stylish gradient text!
