@@ -1,0 +1,245 @@
+/* Dark Mode Theme by sethispr */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: #1e1e1e;
+  color: #d3d3d3;
+}
+
+#container {
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+header {
+  margin: -5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header-text {
+  background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 2px
+    no-repeat;
+  color: #808080;
+  transition: 0.5s;
+  font-size: 15px;
+  animation: rainbow_animation 30s linear infinite;
+}
+
+.header-text:hover {
+  --d: 100%;
+}
+
+@keyframes rainbow_animation {
+  from {
+    color: #ff0000;
+  }
+  14% {
+    color: #ffa200;
+  }
+  28% {
+    color: #ffe600;
+  }
+  42% {
+    color: #0dff00;
+  }
+  56% {
+    color: #00f7ff;
+  }
+  70% {
+    color: #001eff;
+  }
+  84% {
+    color: #ae00ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+#gradient-text,
+#bbcode-output {
+  color: #ffffff;
+  margin: 2px;
+  width: 300px;
+  min-width: 200px;
+  max-width: 600px;
+  height: 100px;
+  min-height: 150px;
+  max-height: 600px;
+  color: rgb(220, 221, 222);
+  font-size: 16px;
+  padding: 9px 9px;
+  background: rgb(48, 48, 48);
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  border-radius: 8px;
+  outline: none;
+  transition: background-color 150ms ease 0s, border-color, color;
+}
+
+#color-picker-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.color-picker {
+  width: 70px;
+  height: 30px;
+  border: 1px solid #808089;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #808089;
+  color: #d3d3d3;
+}
+
+#palette {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.palette-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid #d3d3d3;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#font-select,
+#font-size {
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #303030;
+  color: #fff;
+}
+
+#bold-italic-checkbox label {
+  margin-left: 5px;
+  color: #fff;
+}
+
+#copy-button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  background-color: #333;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#copy-button:hover {
+  background-color: #555;
+}
+
+#copy-button:active {
+  background-color: #2b2b2b;
+  transform: scale(0.95);
+}
+
+#output-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#output-text {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #d3d3d3;
+}
+
+#bbcode-output {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  margin-top: 20px;
+  font-family: monospace;
+  overflow: auto;
+  text-align: left;
+  background-color: #303030;
+}
+
+select {
+  background-color: #2b2b2b;
+  color: #d3d3d3;
+  border: 3px solid #555;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+}
+
+select:hover {
+  background-color: #333;
+  border-color: #808089;
+}
+select option {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #555;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #d3d3d3;
+  border: 1px solid #1e1e1e;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#gradient-text:focus,
+#gradient-text:hover,
+#copy-button:hover,
+.palette-color:hover {
+  border-color: #808089;
+}
+
+#gradient-text:active {
+  border-color: #d3d3d3;
+}
+
+input[type="checkbox"]:hover {
+  background-color: #444;
+}
