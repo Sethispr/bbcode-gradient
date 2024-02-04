@@ -1,19 +1,28 @@
 /* Dark Mode Theme by sethispr */
+/* Gradient Background from https://products.ls.graphics/mesh-gradients/images/29.-Pale-Cornflower-Blue_1.jpg */
+/* Free icons from https://flaticon.com */
+
 body {
   font-family: "Poppins", Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
+  height: 100vh;
+  width: 100vw;
   background-color: #1e1e1e;
   color: #d3d3d3;
+  background-image: url("https://products.ls.graphics/mesh-gradients/images/29.-Pale-Cornflower-Blue_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #container {
   background-color: #2b2b2b;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 15px 12px 5px 2px rgba(225, 170, 225, 0.7);
   text-align: center;
 }
 
@@ -29,40 +38,63 @@ header {
 .header-text {
   background: linear-gradient(currentColor 0 0) bottom / var(--d, 0) 2px
     no-repeat;
-  color: #808080;
+  color: #383338;
   transition: 0.5s;
   font-size: 15px;
-  animation: rainbow_animation 30s linear infinite;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  /*animation: gradient_animation 15s linear infinite;*/
 }
 
 .header-text:hover {
   --d: 100%;
 }
 
-@keyframes rainbow_animation {
+.btn.link {
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn.link a {
+  color: var(--yellow);
+  text-shadow: 0px 0px 5px black;
+  padding: 0.2em 1em;
+  font-size: 1.5rem;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  top: 2px;
+  position: relative;
+  display: block;
+}
+
+@keyframes gradient_animation {
   from {
-    color: #ff0000;
+    color: #f780ff;
   }
   14% {
-    color: #ffa200;
+    color: #ef8fff;
   }
   28% {
-    color: #ffe600;
+    color: #e69eff;
   }
   42% {
-    color: #0dff00;
+    color: #deadff;
   }
   56% {
-    color: #00f7ff;
+    color: #d6bcff;
   }
   70% {
-    color: #001eff;
+    color: #cecbff;
   }
   84% {
-    color: #ae00ff;
+    color: #c5daff;
   }
   100% {
-    color: #ff0000;
+    color: #bde9ff;
   }
 }
 
@@ -73,8 +105,8 @@ header {
   width: 300px;
   min-width: 200px;
   max-width: 600px;
-  height: 100px;
-  min-height: 150px;
+  height: 70px;
+  min-height: 50px;
   max-height: 600px;
   color: rgb(220, 221, 222);
   font-size: 16px;
@@ -87,6 +119,11 @@ header {
   border-radius: 8px;
   outline: none;
   transition: background-color 150ms ease 0s, border-color, color;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
 }
 
 #color-picker-container {
@@ -134,12 +171,13 @@ header {
   margin-bottom: 10px;
   width: 100%;
   background-color: #303030;
-  color: #fff;
+  color: #d3d3d3;
 }
 
 #bold-italic-checkbox label {
   margin-left: 5px;
-  color: #fff;
+  color: #d3d3d3;
+  align-items: center;
 }
 
 #copy-button {
@@ -166,7 +204,7 @@ header {
 #output-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: right;
 }
 
 #output-text {
@@ -180,7 +218,7 @@ header {
 
 #bbcode-output {
   width: 300px;
-  height: 100px;
+  height: 50px;
   padding: 10px;
   margin-top: 20px;
   font-family: monospace;
@@ -196,14 +234,32 @@ select {
   padding: 8px;
   border-radius: 4px;
   outline: none;
+  height: 50px;
+  size: 5;
+  appearance: none; /* Removes default appearance */
+  -webkit-appearance: none; /* For older versions of Safari/Chrome */
+  background-image: url("https://cdn.glitch.global/87407f9b-2f94-4ed8-bfe5-9b1cdb8778f4/left-modified.png?v=1706926491357");
+  background-size: 30px; /* Adjust the size of the arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
 }
 
 select:hover {
   background-color: #333;
-  border-color: #808089;
+  border-color: #f780ff;
 }
 select option {
   font-family: "Poppins", Arial, sans-serif;
+  size: 5;
+}
+
+::selection {
+  background-color: #ff69b4;
 }
 
 input[type="checkbox"] {
@@ -217,10 +273,24 @@ input[type="checkbox"] {
   outline: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-right: 0px;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+}
+
+input[type="checkbox"]:hover {
+  border: 3px solid #f780ff;
+  box-shadow: 0px 0px 8px 1px #9f2a4571;
+  filter: brightness(120%);
+  outline: 2px solid #808080;
+  -webkit-filter: brightness(120%);
 }
 
 input[type="checkbox"]:checked {
-  background-color: #d3d3d3;
+  background: linear-gradient(to right, #f780ff, #bde9ff);
   border: 1px solid #1e1e1e;
 }
 
@@ -229,17 +299,26 @@ input[type="range"] {
   margin-top: 10px;
 }
 
-#gradient-text:focus,
+/*808089*/
 #gradient-text:hover,
 #copy-button:hover,
-.palette-color:hover {
-  border-color: #808089;
+#checkbox:hover {
+  border-color: #f780ff;
 }
 
 #gradient-text:active {
   border-color: #d3d3d3;
 }
 
-input[type="checkbox"]:hover {
-  background-color: #444;
+.hide-overflow {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
+
+canvas {
+  background-color: #005d55;
+  height: 100vh;
+  width: 100vw;
+}
+
