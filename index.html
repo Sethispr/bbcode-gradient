@@ -4,10 +4,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BBCode gradient generator which allows you to create horizontal gradient effects for your text!" />
+    <title>gradients~</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -20,7 +23,8 @@
       <textarea
         id="gradient-text"
         rows="4"
-        placeholder="Start typing.."
+        placeholder="Start typing..
+Customize colors below..."
       ></textarea>
 
       <div id="color-picker-container">
@@ -28,13 +32,13 @@
           type="color"
           class="color-picker"
           id="start-color"
-          value="#00FFFB"
+          value="#f780ff"
         />
         <input
           type="color"
           class="color-picker"
           id="end-color"
-          value="#C1F0AD"
+          value="#bde9ff"
         />
       </div>
 
@@ -90,18 +94,26 @@
 
         <div id="bold-italic-checkbox">
           <input type="checkbox" id="bold-checkbox" />
-          <label for="bold-checkbox">Bold</label>
-
-          <input type="checkbox" id="italic-checkbox" />
+          <label for="bold-checkbox">Bold</label>      
           <label for="italic-checkbox">Italic</label>
+          <input type="checkbox" id="italic-checkbox" />
         </div>
       </div>
 
       <div id="output-container">
         <div id="output-text"></div>
-        <textarea id="bbcode-output" readonly></textarea>
+        <textarea id="bbcode-output"></textarea>
       </div>
     </div>
+    <script>
+      const PartileAssets = {
+        pattern1: "./assets/solid.svg",
+        pattern2: "./assets/outline.svg",
+        pattern3: "./assets/blur.svg",
+      };
+    </script>
+    <script src="./2d-canvas-image-particles.min.js"></script>
+    <script src="./index.js"></script>
     <script type="module" src="/script.js"></script>
   </body>
 </html>
