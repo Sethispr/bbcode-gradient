@@ -68,17 +68,19 @@ function updateOutputText() {
   if (isItalic) style += "font-style: italic;";
 
   outputText.style = style;
-  outputText.innerHTML = gradientText.value
-    .split("")
-    .map((char, index) => {
-      const charColor = interpolateColor(
-        startColor,
-        endColor,
-        index / Math.max(gradientText.value.length - 1, 1)
-      );
-      return `<span style="color: ${charColor}">${char}</span>`;
-    })
-    .join("");
+  outputText.innerHTML = DOMPurify.sanitize(
+    gradientText.value
+      .split("")
+      .map((char, index) => {
+        const charColor = interpolateColor(
+          startColor,
+          endColor,
+          index / Math.max(gradientText.value.length - 1, 1)
+        );
+        return `<span style="color: ${charColor}">${char}</span>`;
+      })
+      .join("")
+  );
 
   // Update font size in the live preview
   if (selectedSize === "Default") {
@@ -235,3 +237,4 @@ function copyToClipboard() {
   bbcodeOutput.setSelectionRange(0, 0);
   alert("Text copied to clipboard!");
 }
+
