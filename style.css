@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-color: #9ae2f5;
+  background-color: #66b6ed;
   color: #d3d3d3;
 }
 
@@ -26,7 +26,8 @@ body {
   margin: auto;
 }
 
-@media only screen and (max-width: 360px) { /* Fixed background attachment for better mobile display */
+@media only screen and (max-width: 360px) {
+  /* Fixed background attachment for better mobile display */
   #container {
     width: 100%;
   }
@@ -214,7 +215,7 @@ header {
   align-items: center;
 }
 
-/* for copy button and replaces header into buttons*/ 
+/* for copy button and replaces header into buttons*/
 .hbtn {
   position: relative;
   box-sizing: border-box;
@@ -275,7 +276,8 @@ header {
 #output-container {
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: center;
+  justify-content: center;
 }
 
 #output-text {
