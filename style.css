@@ -8,14 +8,13 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: #1e1e1e;
-  color: #d3d3d3;
   background-image: url("https://products.ls.graphics/mesh-gradients/images/29.-Pale-Cornflower-Blue_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
+  background-color: #9ae2f5;
+  color: #d3d3d3;
 }
 
 #container {
@@ -24,6 +23,41 @@ body {
   border-radius: 10px;
   box-shadow: 15px 12px 5px 2px rgba(225, 170, 225, 0.7);
   text-align: center;
+  margin: auto;
+}
+
+@media only screen and (max-width: 360px) { /* Fixed background attachment for better mobile display */
+  #container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles for screens up to 767px (common for mobiles and smaller tablets) */
+  #container {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Styles for screens between 768px and 991px (common for larger tablets) */
+  #container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for screens between 992px and 1199px (common for smaller laptops) */
+  #container {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* Styles for screens 1200px and above (common for larger laptops and PCs) */
+  #container {
+    width: 90%;
+  }
 }
 
 header {
@@ -50,25 +84,10 @@ header {
   --d: 100%;
 }
 
-.btn.link {
-  padding: 0;
-  border: none;
-  border-radius: 10px;
-}
-
-.btn.link a {
-  color: var(--yellow);
-  text-shadow: 0px 0px 5px black;
-  padding: 0.2em 1em;
-  font-size: 1.5rem;
-  text-decoration: none;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  top: 2px;
-  position: relative;
-  display: block;
+.centered-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes gradient_animation {
@@ -105,7 +124,7 @@ header {
   width: 300px;
   min-width: 200px;
   max-width: 600px;
-  height: 70px;
+  height: 80px;
   min-height: 50px;
   max-height: 600px;
   color: rgb(220, 221, 222);
@@ -124,6 +143,21 @@ header {
   -moz-transition: all 250ms ease;
   -ms-transition: all 250ms ease;
   -o-transition: all 250ms ease;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles for screens up to 767px (common for mobiles and smaller tablets) */
+  #gradient-text {
+    width: 70%;
+  }
+}
+
+.copy-icon {
+  font-size: 20px;
+  color: #d3d3d3;
+  cursor: pointer;
+  float: right;
 }
 
 #color-picker-container {
@@ -180,25 +214,62 @@ header {
   align-items: center;
 }
 
-#copy-button {
-  cursor: pointer;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  background-color: #333;
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-  outline: none;
-  transition: background-color 0.3s, transform 0.1s;
+/* for copy button and replaces header into buttons*/ 
+.hbtn {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 20px;
+  margin: 10px 3px 6px;
+  text-align: center;
+  border: 5px solid rgb(255, 255, 255);
+  text-decoration: none;
+  color: rgb(110, 110, 110);
+  white-space: nowrap;
+  z-index: 0;
+  font-weight: bold;
 }
 
-#copy-button:hover {
-  background-color: #555;
+.hbtn i {
+  padding-right: 8px;
 }
 
-#copy-button:active {
-  background-color: #2b2b2b;
-  transform: scale(0.95);
+.hb-border-bottom-br4 {
+  position: relative;
+  transition-duration: 0.3s;
+  overflow: visible;
+  box-sizing: border-box;
+  border: none;
+  padding: 10px 22px;
+}
+
+.hb-border-bottom-br4::after {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border: 3px solid rgb(110, 110, 110);
+  z-index: 2;
+  margin: 0px;
+  left: 0px;
+  bottom: 0px;
+  border-radius: 50px;
+  border-top-width: 3px;
+  transition: border-top-width 0.1s ease 0.2s, height 0.2s ease 0.1s,
+    width 0.2s ease 0s, margin 0.2s ease 0s, border-bottom-width 0.2s ease 0s;
+}
+
+.hb-border-bottom-br4:hover::after {
+  width: 60%;
+  height: 0px;
+  border-width: 0px 3px 3px;
+  margin: 0px 20%;
+  border-radius: 50px;
+  transition: border-top-width 0.1s ease 0s, height 0.2s ease 0.1s,
+    width 0.2s ease 0.2s, margin 0.2s ease 0.2s,
+    border-bottom-width 0.2s ease 0.2s;
 }
 
 #output-container {
@@ -227,10 +298,17 @@ header {
   background-color: #303030;
 }
 
+@media only screen and (max-width: 767px) {
+  /* Styles for screens up to 767px (common for mobiles and smaller tablets) */
+  #bbcode-output {
+    width: 70%;
+  }
+}
+
 select {
   background-color: #2b2b2b;
   color: #d3d3d3;
-  border: 3px solid #555;
+  border: 3px solid #555555;
   padding: 8px;
   border-radius: 4px;
   outline: none;
@@ -250,7 +328,7 @@ select {
 }
 
 select:hover {
-  background-color: #333;
+  background-color: #333333;
   border-color: #f780ff;
 }
 select option {
@@ -266,7 +344,7 @@ input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 1px solid #555;
+  border: 1px solid #555555;
   width: 20px;
   height: 20px;
   border-radius: 5px;
@@ -315,10 +393,3 @@ input[type="range"] {
   height: 100vh;
   width: 100vw;
 }
-
-canvas {
-  background-color: #005d55;
-  height: 100vh;
-  width: 100vw;
-}
-
