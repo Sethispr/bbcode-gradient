@@ -1,4 +1,5 @@
 [![CodeQL](https://github.com/Sethispr/bbcode-gradient/actions/workflows/codeql.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/codeql.yml) [![Deploy to Pages](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)[![Glitch](https://img.shields.io/badge/glitch-%233333FF.svg?style=for-the-badge&logo=glitch&logoColor=white)(https://bbcode.glitch.me/)]
 # bbcode-gradient
 This BBCode Gradient Generator allows you to create horizontal gradient effects for your text, which can be used in forums such as MAL. Customize the appearance of your text by selecting start and end colors, choosing fonts, adjusting size, and applying bold or italic styles.
 
