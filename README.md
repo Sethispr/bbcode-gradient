@@ -2,7 +2,7 @@
 
 **Current Status**: 
 
-![CodeQL](https://github.com/Sethispr/bbcode-gradient/actions/workflows/codeql.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/codeql.yml) [![Deploy to Pages](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml)
+![CodeQL](https://github.com/Sethispr/bbcode-gradient/actions/workflows/codeql.yml/badge.svg)][![Deploy to Pages](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml)
 
 **Tech Stacks**: 
 
