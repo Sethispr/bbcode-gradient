@@ -1,3 +1,6 @@
+// Slight inspirations from stuffbydavid's text colorizer website
+// script.js by seth
+
 const gradientText = document.getElementById("gradient-text");
 const startColorInput = document.getElementById("start-color");
 const endColorInput = document.getElementById("end-color");
@@ -131,20 +134,6 @@ function rgbToHex(r, g, b) {
   return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)}`;
 }
 
-// Function to copy BBcode to clipboard
-function copyBBcode() {
-  const bbcode = generateBBcode();
-  bbcodeOutput.innerText = bbcode;
-
-  const textarea = document.createElement("textarea");
-  textarea.value = bbcode;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textarea);
-
-  alert("BBcode copied to clipboard!");
-}
 // Automatically update preview on text input
 gradientText.addEventListener("input", function () {
   updatePalette();
@@ -152,13 +141,13 @@ gradientText.addEventListener("input", function () {
   updateBBcodeOutput();
 });
 // Automatically update preview on changing start color
-startColor.addEventListener("input", function () {
+startColorInput.addEventListener("input", function () {
   updateOutputText();
   updateBBcodeOutput();
 });
 
 // Automatically update preview on changing end color
-endColor.addEventListener("input", function () {
+endColorInput.addEventListener("input", function () {
   updateOutputText();
   updateBBcodeOutput();
 });
@@ -199,4 +188,50 @@ function generateBBcode() {
 // Function to update BBcode output
 function updateBBcodeOutput() {
   bbcodeOutput.innerText = generateBBcode();
+}
+
+// Control buttons for copy and clear
+document.addEventListener("keydown", function (event) {
+  if (event.ctrlKey && event.key === "x") {
+    copyToClipboard();
+  } else if (event.ctrlKey && event.key === "y") {
+    clearTextarea();
+  }
+});
+
+function clearTextarea() {
+  var gradientText = document.getElementById("gradient-text");
+  gradientText.value = "";
+  alert("Text will be cleared!");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Add copy icon for bbcode-output
+  addCopyIcon("#bbcode-output", copyToClipboard);
+});
+
+function addCopyIcon(selector, onClick) {
+  var container = document.querySelector(selector);
+
+  if (!container) {
+    console.error("Container element not found");
+    return;
+  }
+
+  var copyIcon = document.createElement("i");
+  copyIcon.className = "fas fa-copy copy-icon";
+  container.appendChild(copyIcon);
+
+  copyIcon.addEventListener("click", function () {
+    onClick();
+  });
+}
+
+function copyToClipboard() {
+  var bbcodeOutput = document.getElementById("bbcode-output");
+  bbcodeOutput.select();
+  bbcodeOutput.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  bbcodeOutput.setSelectionRange(0, 0);
+  alert("Text copied to clipboard!");
 }
