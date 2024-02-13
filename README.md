@@ -1,7 +1,8 @@
 # BBcode Gradient
-<div align="center"><h1>View Demos</h1>
+<div align="center"><h2>View Demos</h2>
 
 [![Deploy to Pages](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml)
+
 [![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)](https://sethispr.github.io/bbcode-gradient) 
 [![Glitch](https://img.shields.io/badge/glitch-%233333FF.svg?style=for-the-badge&logo=glitch&logoColor=white)](https://bbcode.glitch.me/)</div>
 
