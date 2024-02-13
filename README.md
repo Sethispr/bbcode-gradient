@@ -1,5 +1,5 @@
-<div align="center"><h1>Gradients</h1></div>
-<div align="center"><h3>Live Demos</h3>
+<div align="center"><h1>Gradients</h1>
+<h3>Live Demos</h3>
 
 [![Deploy to Pages](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml)
 
@@ -32,12 +32,12 @@ This BBCode will produce a gradient-colored text in forums or about mes that sup
 
 Enjoy enhancing your forum posts and profiles with stylish gradient text!
 
-**Tech Stacks**: 
-
+<div align="center"><h3>Tech Stacks</h3> 
+  
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-**Written in**: 
+<h3>Written in</h3>
 
-![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?style=for-the-badge&logo=sublime-text&logoColor=important)
+![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?style=for-the-badge&logo=sublime-text&logoColor=important)</div>
