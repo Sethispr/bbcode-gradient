@@ -2,7 +2,6 @@
 
 <div align="center"><b>Current Status</b>
   
-![CodeQL](https://github.com/Sethispr/bbcode-gradient/actions/workflows/codeql.yml/badge.svg) 
 [![Deploy to Pages](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml)</div>
 <div align="center"><b>View Demos</b>
   
