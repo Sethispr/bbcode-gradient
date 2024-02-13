@@ -1,195 +1,123 @@
 <!-- Gradient Text Colorizer by sethispr -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A BBCode gradient generator allowing you to make horizontal gradient effects for your text! Easily colorize your text for MAL!"
-    />
-
-    <!-- OpenGraph Tags -->
-    <meta property="og:title" content="BBCode Gradient Generator" />
-    <meta
-      property="og:description"
-      content="Create stunning horizontal gradient effects for your text with this BBCode gradient generator!"
-    />
-    <meta
-      property="og:image"
-      content="https://products.ls.graphics/mesh-gradients/images/29.-Pale-Cornflower-Blue_1.jpg"
-    />
-    <meta property="og:url" content="https://bbcode.glitch.me/" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="BBCode Gradient Generator" />
-    <meta
-      name="twitter:description"
-      content="Create stunning horizontal gradient effects for your text with this BBCode gradient generator!"
-    />
-    <meta
-      name="twitter:image"
-      content="https://products.ls.graphics/mesh-gradients/images/29.-Pale-Cornflower-Blue_1.jpg"
-    />
-    <meta name="twitter:url" content="https://bbcode.glitch.me/" />
-
-    <!-- Discord Meta Tags -->
-    <meta property="og:site_name" content="BBCode Gradient Generator" />
-    <meta property="og:locale" content="en_US" />
-
-    <title>Gradient Colorizer</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://cdn.glitch.global/87407f9b-2f94-4ed8-bfe5-9b1cdb8778f4/apple-touch-icon.png?v=1707099007896"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://cdn.glitch.global/87407f9b-2f94-4ed8-bfe5-9b1cdb8778f4/favicon-32x32.png?v=1707099033642"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://cdn.glitch.global/87407f9b-2f94-4ed8-bfe5-9b1cdb8778f4/favicon-16x16.png?v=1707099026074"
-    />
-    <link
-      rel="manifest"
-      href="https://cdn.glitch.global/87407f9b-2f94-4ed8-bfe5-9b1cdb8778f4/site.webmanifest?v=1707099247296"
-    />
-  </head>
-  <body>
-    <h1 style="display: none">
-      BBCode Text Colorizer for Stylish Effects in MAL or Forums.
-    </h1>
-    <div class="header">
-      <span>
-        <a
-          href="https://github.com/Sethispr/bbcode-gradient?tab=readme-ov-file#bbcode-gradient"
-          class="hbtn hb-border-bottom-br4 centered-icon"
-          style="margin-left: 80px"
-        >
-          About
-        </a>
-
-        <a
-          href="https://myanimelist.net/profile/Sethispr"
-          class="hbtn hb-border-bottom-br4 centered-icon"
-          style="margin-right: 70px"
-        >
-          With <i class="fas fa-heart" aria-hidden="true"></i>
-        </a>
-      </span>
-      <div id="container">
-        <textarea
-          id="gradient-text"
-          rows="4"
-          placeholder="Start typing..
-Customize colors below...
-Ctrl + X to copy!
-Ctrl + Y to clear!"
-        ></textarea>
-
-        <div id="color-picker-container">
-          <input
-            type="color"
-            class="color-picker"
-            id="start-color"
-            value="#f780ff"
-          />
-          <input
-            type="color"
-            class="color-picker"
-            id="end-color"
-            value="#bde9ff"
-          />
-        </div>
-
-        <div id="palette"></div>
-
-        <div id="settings-container">
-          <label for="font-select">Font</label>
-          <select id="font-select">
-            <option value="Default">Default</option>
-            <option value="Arial">Arial</option>
-            <option value="Arial Black">Arial Black</option>
-            <option value="Arial Narrow">Arial Narrow</option>
-            <option value="Book Antiqua">Book Antiqua</option>
-            <option value="Calibri">Calibri</option>
-            <option value="Cambria">Cambria</option>
-            <option value="Candara">Candara</option>
-            <option value="Century">Century</option>
-            <option value="Century Gothic">Century Gothic</option>
-            <option value="Consolas">Consolas</option>
-            <option value="Constantia">Constantia</option>
-            <option value="Copperplate">Copperplate</option>
-            <option value="Corbel">Corbel</option>
-            <option value="Curlz MT">Curlz MT</option>
-            <option value="cursive">Cursive</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="Fixedsys">Fixedsys</option>
-            <option value="Franklin Gothic Medium">
-              Franklin Gothic Medium
-            </option>
-            <option value="Gabriola">Gabriola</option>
-            <option value="Garamond">Garamond</option>
-            <option value="Garton">Garton</option>
-            <option value="Lucida Console">Lucida Console</option>
-            <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-            <option value="Microsoft Sans Serif">Microsoft Sans Serif</option>
-            <option value="Mistral">Mistral</option>
-            <option value="monospace">Monospace</option>
-            <option value="Monotype Corsiva">Monotype Corsiva</option>
-            <option value="Nyala">Nyala</option>
-            <option value="Optima">Optima</option>
-            <option value="Palatino Linotype">Palatino Linotype</option>
-            <option value="Papyrus">Papyrus</option>
-            <option value="System">System</option>
-            <option value="Tahoma">Tahoma</option>
-            <option value="Webdings">Webdings</option>
-          </select>
-
-          <label for="font-size">Size</label>
-          <select id="font-size">
-            <option value="Default">Default</option>
-            <option value="1">Small</option>
-            <option value="2">Medium</option>
-            <option value="3">Large</option>
-          </select>
-
-          <div id="bold-italic-checkbox">
-            <input type="checkbox" id="bold-checkbox" />
-            <label for="bold-checkbox">Bold</label>
-            <label for="italic-checkbox">Italic</label>
-            <input type="checkbox" id="italic-checkbox" />
-          </div>
-        </div>
-
-        <div id="output-container">
-          <div id="output-text"></div>
-          <!-- <i class="fas fa-copy copy-icon"></i> -->
-          <textarea id="bbcode-output" readonly></textarea>
-        </div>
-      </div>
-    </div>
-    <script type="module" src="/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.8/purify.min.js"></script>
-  </body>
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Modern BBCode gradient text effect generator allowing you to make horizontal effects for your text! Easily colorize your text for MAL or forums!">
+<link rel=preconnect href=https://bbcode.glitch.me/ >
+<link rel=preconnect href=https://fonts.googleapis.com/ crossorigin>
+<link rel=preconnect href=https://fonts.gstatic.com/ crossorigin>
+<link rel=dns-prefetch href=https://cdn.glitch.global/ >
+<link rel=dns-prefetch href=https://bbcode.glitch.me/ >
+<link rel=dns-prefetch href=https://cdn.glitch.global/ >
+<link rel=canonical href=https://bbcode.glitch.me/ >
+<meta property=og:title content="BBCode Gradient Generator">
+<meta property=og:description content="Create stunning horizontal gradient effects for your text with this BBCode gradient generator!">
+<meta property=og:image content=https://products.ls.graphics/mesh-gradients/images/29.-Pale-Cornflower-Blue_1.jpg>
+<meta property=og:url content=https://bbcode.glitch.me/ >
+<meta property=og:type content=website>
+<meta name=twitter:card content=summary_large_image>
+<meta name=twitter:title content="BBCode Gradient Generator">
+<meta name=twitter:description content="Create stunning horizontal gradient effects for your text with this BBCode gradient generator!">
+<meta name=twitter:image content=https://products.ls.graphics/mesh-gradients/images/29.-Pale-Cornflower-Blue_1.jpg>
+<meta name=twitter:url content=https://bbcode.glitch.me/ >
+<meta property=og:site_name content="BBCode Gradient Generator">
+<meta property=og:locale content=en_US>
+<title>BBCode Gradient Generator</title>
+<link rel=stylesheet href=style.css>
+<link rel=apple-touch-icon sizes=180x180 href="https://cdn.glitch.global/87407f9b-2f94-4ed8-bfe5-9b1cdb8778f4/apple-touch-icon.png?v=1707099007896">
+<link rel=icon type=image/png sizes=32x32 href="https://cdn.glitch.global/87407f9b-2f94-4ed8-bfe5-9b1cdb8778f4/favicon-32x32.png?v=1707099033642">
+<link rel=icon type=image/png sizes=16x16 href="https://cdn.glitch.global/87407f9b-2f94-4ed8-bfe5-9b1cdb8778f4/favicon-16x16.png?v=1707099026074">
+</head>
+<body>
+<div class=header>
+<div id=container>
+<textarea id=gradient-text rows=4></textarea>
+<div id=color-picker-container>
+<input type=color class=color-picker id=start-color value=#f780ff>
+<input type=color class=color-picker id=end-color value=#bde9ff>
+</div>
+<div id=palette></div>
+<div id=settings-container>
+<label for=font-select>Font</label>
+<select id=font-select>
+<option value=Default>Recommended</option>
+<option value=Tahoma>Recommended No.2</option>
+<option value=Arial>Arial</option>
+<option value="Arial Black">Arial Black</option>
+<option value="Arial Narrow">Arial Narrow</option>
+<option value="Book Antiqua">Book Antiqua</option>
+<option value=Calibri>Calibri</option>
+<option value=Cambria>Cambria</option>
+<option value=Candara>Candara</option>
+<option value=Century>Century</option>
+<option value="Century Gothic">Century Gothic</option>
+<option value=Consolas>Consolas</option>
+<option value=Constantia>Constantia</option>
+<option value=Copperplate>Copperplate</option>
+<option value=Corbel>Corbel</option>
+<option value="Curlz MT">Curlz MT</option>
+<option value=cursive>Cursive</option>
+<option value=fantasy>Fantasy</option>
+<option value=Fixedsys>Fixedsys</option>
+<option value="Franklin Gothic Medium">
+Franklin Gothic Medium
+</option>
+<option value=Gabriola>Gabriola</option>
+<option value=Garamond>Garamond</option>
+<option value=Garton>Garton</option>
+<option value="Lucida Console">Lucida Console</option>
+<option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+<option value="Microsoft Sans Serif">Microsoft Sans Serif</option>
+<option value=Mistral>Mistral</option>
+<option value=monospace>Monospace</option>
+<option value="Monotype Corsiva">Monotype Corsiva</option>
+<option value=Nyala>Nyala</option>
+<option value=Optima>Optima</option>
+<option value="Palatino Linotype">Palatino Linotype</option>
+<option value=Papyrus>Papyrus</option>
+<option value=System>System</option>
+<option value=Tahoma>Tahoma</option>
+<option value=Webdings>Webdings</option>
+<option value=Default>Hi there!</option>
+<option value=Default>
+This BBcode generator does not provide
+</option>
+<option value=Default>
+Middle gradient/3 Color gradient effects yet!
+</option>
+<option value=Default>
+For source code and tutorial
+</option>
+<option value=Default>
+Visit: https://github.com/Sethispr/bbcode-gradient
+</option>
+</select>
+<label for=font-size>Size</label>
+<select id=font-size>
+<option value=Default>Default</option>
+<option value=3>Recommended for 1 word</option>
+<option value=1>Small</option>
+<option value=2>Medium</option>
+<option value=3>Large</option>
+</select>
+<div id=bold-italic-checkbox>
+<input type=checkbox id=bold-checkbox checked>
+<label for=bold-checkbox>Bold</label>
+<label for=italic-checkbox>Italic</label>
+<input type=checkbox id=italic-checkbox>
+</div>
+</div>
+<div id=output-container>
+<div id=output-text></div>
+<textarea id=bbcode-output readonly></textarea>
+</div>
+</div>
+<h1>
+<br>Ctrl + X to copy! Ctrl + Y to clear!
+</h1>
+</div>
+<script type=module src=/script.js></script>
+</body>
 </html>
