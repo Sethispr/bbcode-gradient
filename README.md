@@ -5,20 +5,10 @@
 ![CodeQL](https://github.com/Sethispr/bbcode-gradient/actions/workflows/codeql.yml/badge.svg) 
 [![Deploy to Pages](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml)
 
-**Tech Stacks**: 
-
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
 **View Demos**: 
 
 [![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)](https://sethispr.github.io/bbcode-gradient) 
 [![Glitch](https://img.shields.io/badge/glitch-%233333FF.svg?style=for-the-badge&logo=glitch&logoColor=white)](https://bbcode.glitch.me/)
-
-**Written in**: 
-
-![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?style=for-the-badge&logo=sublime-text&logoColor=important)
 
 This BBCode Gradient Generator allows you to create horizontal gradient effects for your text, which can be used in forums such as MAL. Customize the appearance of your text by selecting start and end colors, choosing fonts, adjusting size, and applying bold or italic styles.
 
@@ -45,3 +35,13 @@ Here's an example of generated BBCode:
 This BBCode will produce a gradient-colored text in forums or about mes that support the specified BBCode.
 
 Enjoy enhancing your forum posts and profiles with stylish gradient text!
+
+**Tech Stacks**: 
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+**Written in**: 
+
+![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?style=for-the-badge&logo=sublime-text&logoColor=important)
