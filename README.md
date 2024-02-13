@@ -1,5 +1,5 @@
 <div align="center"><h1>Gradients</h1></div>
-<div align="center"><h3>View Demos</h3>
+<div align="center"><h3>Live Demos</h3>
 
 [![Deploy to Pages](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml/badge.svg)](https://github.com/Sethispr/bbcode-gradient/actions/workflows/static.yml)
 
